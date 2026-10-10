@@ -1,0 +1,2 @@
+"""Trend storage and management."""
+

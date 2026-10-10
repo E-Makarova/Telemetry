@@ -1,0 +1,53 @@
+{
+  "data_dir": "%TEMP%/TelemetrySQLiteSystem/data",
+  "log_dir": "%TEMP%/TelemetrySQLiteSystem/logs",
+  "poll_interval_seconds": 1.0,
+  "queues": {
+    "input_maxsize": 30000,
+    "valid_maxsize": 30000
+  },
+  "sqlite": {
+    "path": "%TEMP%/TelemetrySQLiteSystem/data/telemetry.sqlite3",
+    "batch_size": 1000,
+    "flush_interval_ms": 250,
+    "retention_days": 30
+  },
+  "wal": {
+    "path": "%TEMP%/TelemetrySQLiteSystem/data/trends/trend.wal",
+    "fsync_each_record": true,
+    "compact_every_records": 1200
+  },
+  "trends": {
+    "directory": "%TEMP%/TelemetrySQLiteSystem/data/trends",
+    "window_size": 3600,
+    "interval_seconds": 1.0,
+    "items": [
+      {"trend_id": "trend_001", "source_id": "source_1", "object_id": "obj_0001"},
+      {"trend_id": "trend_002", "source_id": "source_1", "object_id": "obj_0002"},
+      {"trend_id": "trend_003", "source_id": "source_1", "object_id": "obj_0003"},
+      {"trend_id": "trend_004", "source_id": "source_1", "object_id": "obj_0004"},
+      {"trend_id": "trend_005", "source_id": "source_1", "object_id": "obj_0005"},
+      {"trend_id": "trend_006", "source_id": "source_2", "object_id": "obj_0001"},
+      {"trend_id": "trend_007", "source_id": "source_2", "object_id": "obj_0002"},
+      {"trend_id": "trend_008", "source_id": "source_2", "object_id": "obj_0003"},
+      {"trend_id": "trend_009", "source_id": "source_2", "object_id": "obj_0004"},
+      {"trend_id": "trend_010", "source_id": "source_2", "object_id": "obj_0005"},
+      {"trend_id": "trend_011", "source_id": "source_3", "object_id": "obj_0001"},
+      {"trend_id": "trend_012", "source_id": "source_3", "object_id": "obj_0002"},
+      {"trend_id": "trend_013", "source_id": "source_3", "object_id": "obj_0003"},
+      {"trend_id": "trend_014", "source_id": "source_3", "object_id": "obj_0004"},
+      {"trend_id": "trend_015", "source_id": "source_3", "object_id": "obj_0005"},
+      {"trend_id": "trend_016", "source_id": "source_4", "object_id": "obj_0001"},
+      {"trend_id": "trend_017", "source_id": "source_4", "object_id": "obj_0002"},
+      {"trend_id": "trend_018", "source_id": "source_4", "object_id": "obj_0003"},
+      {"trend_id": "trend_019", "source_id": "source_4", "object_id": "obj_0004"},
+      {"trend_id": "trend_020", "source_id": "source_4", "object_id": "obj_0005"}
+    ]
+  },
+  "sources": [
+    {"source_id": "source_1", "name": "Source 1", "object_count": 1000, "min_changes_per_tick": 100, "max_changes_per_tick": 600, "error_rate": 0.01, "invalid_rate": 0.002, "max_delay_ms": 100},
+    {"source_id": "source_2", "name": "Source 2", "object_count": 1000, "min_changes_per_tick": 100, "max_changes_per_tick": 600, "error_rate": 0.01, "invalid_rate": 0.002, "max_delay_ms": 150},
+    {"source_id": "source_3", "name": "Source 3", "object_count": 1000, "min_changes_per_tick": 100, "max_changes_per_tick": 600, "error_rate": 0.01, "invalid_rate": 0.002, "max_delay_ms": 200},
+    {"source_id": "source_4", "name": "Source 4", "object_count": 1000, "min_changes_per_tick": 100, "max_changes_per_tick": 600, "error_rate": 0.01, "invalid_rate": 0.002, "max_delay_ms": 250}
+  ]
+}
